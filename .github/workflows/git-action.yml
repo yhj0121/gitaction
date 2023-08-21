@@ -6,10 +6,6 @@ on:
   pull_request:
     branches: [develop]
 
-defaults:
-  run:
-    working-directory: ./gitaction
-
 jobs:
   node_CI:
     runs-on: ubuntu-latest
