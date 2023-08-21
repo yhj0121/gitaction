@@ -8,7 +8,7 @@ on:
 
 defaults:
   run:
-    working-directory: ./hello-typeorm
+    working-directory: ./gitaction
 
 jobs:
   node_CI:
@@ -20,18 +20,18 @@ jobs:
 
     steps:
       - name: Checkout source code
-        uses: actions/checkout@v3 // 6
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3 // 7
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
-        run: yarn install // 8
+        run: yarn install
 
       - name: Test unit
-        run: yarn test // 9
+        run: yarn test
 
       - name: build
-        run: yarn build // 10
+        run: yarn build
